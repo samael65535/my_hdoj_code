@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
       else{
 	sum[start] = num[start] + sum[start-1];
       }
-        if(max<sum[start]){
+      if(max<sum[start]){
 	max = sum[start];
 	end = start;
       }
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
     }
     printf ("Case %d:\n",k++);
     printf ("%d %d %d\n",max, start+1, end);
-    for(start = 1; start <= n; start++){
-      printf ("%d %d %d\n",start, num[start], sum[start]);
-    }
+    /* for(start = 1; start <= n; start++){ */
+    /*   printf ("%d %d %d\n",start, num[start], sum[start]); */
+    /* } */
 
   }
   return 0 ;

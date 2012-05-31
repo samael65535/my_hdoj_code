@@ -7,7 +7,7 @@ struct student
   int q;
   int cost;
 };
-int *cmp(const void* a, const void* b) /* 三级比较,注意排序规则 */
+int cmp(const void* a, const void* b) /* 三级比较,注意排序规则 */
 {
   struct student* s1=(struct student*) a;
   struct student* s2=(struct student*) b;

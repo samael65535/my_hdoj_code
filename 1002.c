@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #define N 1005
-main()
+int main()
 {
   int a[N], b[N], sum[N], t=0;		
   int i = 0, k = 0;
@@ -46,4 +46,5 @@ main()
     }
     s = 1;
   }
+  return 0;
 }
