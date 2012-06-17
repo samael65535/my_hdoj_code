@@ -7,24 +7,25 @@ int visited[21];
 int prim[40]={0};
 int caseFlag;
 int caseCnt=0;
- void Prim()
- {
-     int i;
-     for(int n=1;n<40;n++) 
-     { 
-         int k=sqrt((double)n); 
-         for(i=2;i<=k;i++) 
-             if(n%i==0) 
-                 break; 
-         if(i==k+1)
-         { 
-             prim[n]=1;
-         } 
-     } 
- }
+void Prim()
+{
+  int i, n;
+  for(n=1;n<40;n++) 
+    { 
+      int k=sqrt((double)n); 
+      for(i=2;i<=k;i++) 
+	if(n%i==0) 
+	  break; 
+      if(i==k+1)
+	{ 
+	  prim[n]=1;
+	} 
+    } 
+}
 void dfs(int prev)
 {
-  for (int i=2;i<=num;i++)
+  int i;
+  for (i=2;i<=num;i++)
     {
       if(visited[i]||!prim[i+result[prev]]) continue;
       visited[i]=1;
@@ -39,7 +40,7 @@ void dfs(int prev)
 	  printf("Case %d:\n",caseCnt);
 	  caseFlag=0;
 	}
-      for (int i=1;i<num;i++)
+      for (i=1;i<num;i++)
 	printf("%d ",result[i]);
       printf("%d",result[num]);
       printf("\n");
